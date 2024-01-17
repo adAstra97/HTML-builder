@@ -11,7 +11,9 @@ fsPromises.readdir(secretFolderPath, { withFileTypes: true }).then((res) => {
 
       fsPromises.stat(filePath).then((stat) => {
         console.log(
-          `${basename} - ${extname.slice(1)} - ${(stat.size / 1024).toFixed(3)}kb`,
+          `${basename} - ${extname.slice(1)} - ${(stat.size / 1024).toFixed(
+            3,
+          )}kb`,
         );
       });
     }
